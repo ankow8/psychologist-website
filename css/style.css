@@ -1,2 +1,13 @@
+header {
+  background-image: url(/images/road.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+header .top_image .top_image_background {
+  border: 1px solid;
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVDQUF1QztFQUN2QyxzQkFBc0I7RUFDdEIsMkJBQTJCO0FDQzdCOztBREpBO0VBT00saUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixnQkFBZ0I7RUFDaEIsY0FBYztBQ0NwQiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */

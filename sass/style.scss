@@ -1,0 +1,14 @@
+header {
+  background-image: url(/images/road.jpg);
+  background-size: cover;
+  background-position: center;
+  .top_image {
+
+    .top_image_background {
+      border: 1px solid;
+      display: flex;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+}
