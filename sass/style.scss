@@ -1,14 +1,110 @@
-header {
+/* Variables */
+
+$color-main: #596275;
+$color-first: #596275;
+$text-dark: #000;
+$text-light: #fff;
+$font-text: 'Open Sans', sans-serif;
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: $font-text;
+  color: $text-dark;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 96px 0;
+}
+
+.chapter {
+    font-size: 48px;
+    margin: 0 0 72px 0;
+}
+
+.chapter-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+}
+
+/* Header */
+
+.road {
+  position: relative;
+  min-height: 300px;
   background-image: url(/images/road.jpg);
   background-size: cover;
   background-position: center;
-  .top_image {
-
-    .top_image_background {
-      border: 1px solid;
-      display: flex;
-      max-width: 900px;
-      margin: 0 auto;
+  color: $text-light;
+  .author {
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    background: $color-main;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .page_title {
+      position: relative;
+      .page_title::after {
+        position: absolute;
+        content: '';
+        bottom: -24px;
+        left: 50%;
+        width: 100px;
+        height: 10px;
+        transform: translateX(-50%);
+        background: #fff;
+      }
     }
+  }
+}
+
+/* Info */
+
+.info {
+  max-height: 600px;
+  color: $text-light;
+  background: $color-first;
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+          .box {
+              position: relative;
+              flex: 0 0 33.3333%;
+              padding: 0 0 36px 0;
+          }
+  }
+}
+
+/* Footer */
+
+footer {
+  color: $text-light;
+  margin: 0;
+  border-top: 1px groove;
+  border-color: $text-light;
+  background: $color-first;
+  p {
+    margin: 0;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
   }
 }
