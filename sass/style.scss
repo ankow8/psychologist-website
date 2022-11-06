@@ -2,6 +2,7 @@
 
 $color-main: #596275;
 $color-first: #596275;
+$color-title: rgba(0, 0, 0, 0.5);
 $text-dark: #000;
 $text-light: #fff;
 $font-text: 'Open Sans', sans-serif;
@@ -20,6 +21,11 @@ body {
   color: $text-dark;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 .container {
     max-width: 1140px;
     padding: 0 20px;
@@ -28,12 +34,19 @@ body {
 }
 
 section {
-    padding: 96px 0;
+    padding: 36px 0;
+}
+
+.medical_site {
+  margin: 64px 0 0 30px;
+  height: 100%;
+  float: right;
 }
 
 .chapter {
-    font-size: 48px;
-    margin: 0 0 72px 0;
+    font-size: 36px;
+    margin: 48px 0 12px 0;
+    padding-bottom: 12px;
 }
 
 .chapter-title {
@@ -42,29 +55,84 @@ section {
     margin: 0 0 12px 0;
 }
 
+/* Navigation */
+
+nav {
+  position: fixed;
+  margin-bottom: 40px;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  background: #596275;
+  padding: 12px 0;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    li {
+      position: relative;
+      display: inline-block;
+      justify-content: flex-end;
+      margin-right: 36px;
+      &:hover ul {
+        display: block;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        opacity: 50%;
+      }
+    }
+  }
+}
+
+
+.navigation ul ul {
+  position: absolute;
+  display: none;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px;
+  li {
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  a {
+    color: #0097e6;
+    display: block;
+    padding: 0 24px;
+    &:hover {
+      color: #33d9b2;
+    }
+  }
+}
+
 /* Header */
 
 .road {
   position: relative;
+  margin-top: 40px;
   min-height: 400px;
-  background-image: url(https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg);
+  background-image: url(/images/road_g.jpg);  //https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg
   background-size: cover;
   background-position: center;
   color: $text-light;
   .author {
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 0 20px 0 20px;
-    background: $color-main;
+    background-color: $color-title;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     .page_title {
-      position: relative;
       .page_title::after {
-        position: absolute;
-        content: '';
+        content: 'a';
         bottom: -24px;
         left: 50%;
         width: 100px;
@@ -72,6 +140,16 @@ section {
         transform: translateX(-50%);
         background: #fff;
       }
+    }
+    .line {
+      border: 1px solid;
+      margin: 0 60px 0 60px;
+      opacity: 50%;
+    }
+    .page_subtitle {
+      font-size: 20px;
+      font-weight: normal;
+      color: #e6e6e6;
     }
   }
 }
@@ -83,14 +161,17 @@ section {
   color: $text-light;
   background: $color-first;
   .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-          .box {
-              position: relative;
-              flex: 0 0 33.3333%;
-              padding: 0 0 36px 0;
-          }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .box {
+      position: relative;
+      flex: 0 0 33.3333%;
+      padding: 0 0 36px 0;
+      &.adress {
+        font-size: 24px;
+      }
+    }
   }
 }
 
