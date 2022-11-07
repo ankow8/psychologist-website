@@ -14,6 +14,7 @@ $font-text: 'Open Sans', sans-serif;
 }
 
 body {
+  min-width: 600px;
   margin: 0;
   font-size: 16px;
   line-height: 1.7;
@@ -38,9 +39,12 @@ section {
 }
 
 .medical_site {
-  margin: 64px 0 0 30px;
+  margin: 128px 0 0 30px;
   height: 100%;
   float: right;
+  .profile {
+    border: 0;
+  }
 }
 
 .chapter {
@@ -58,6 +62,7 @@ section {
 /* Navigation */
 
 nav {
+  min-width: 600px;
   position: fixed;
   margin-bottom: 40px;
   z-index: 1;
@@ -66,6 +71,7 @@ nav {
   background: #596275;
   padding: 12px 0;
   ul {
+    float: left;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -77,13 +83,26 @@ nav {
       &:hover ul {
         display: block;
       }
-    }
-    a {
-      text-decoration: none;
-      color: #fff;
-      &:hover {
-        opacity: 50%;
+      a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          opacity: 50%;
+        }
       }
+    }
+  }
+  .phone_number_nav {
+    display: flex;
+    float: right;
+    svg {
+      height: 16px;
+      color: #fff;
+      margin: 5px 15px 0 0;
+    }
+    .phone_number {
+      margin: 0;
+      color: #fff;
     }
   }
 }
@@ -117,7 +136,7 @@ nav {
   position: relative;
   margin-top: 40px;
   min-height: 400px;
-  background-image: url(https://images.unsplash.com/photo-1553970105-9b6beb48ad9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80);
+  background-image: url(/images/road.jpg);
   background-size: cover;
   background-position: center;
   color: $text-light;
@@ -158,6 +177,7 @@ nav {
 
 .info {
   max-height: 600px;
+  min-width: 600px;
   color: $text-light;
   background: $color-first;
   .row {
@@ -169,7 +189,19 @@ nav {
       flex: 0 0 33.3333%;
       padding: 0 0 36px 0;
       &.adress {
-        font-size: 24px;
+        font-size: 18px;
+      }
+      .phone_number_box {
+        display: flex;
+        margin-top: 10px;
+        svg {
+          height: 24px;
+          color: #fff;
+          margin: 20px 18px 20px 0;
+        }
+        .phone_number {
+          font-size: 18px;
+        }
       }
     }
   }
