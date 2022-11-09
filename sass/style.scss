@@ -39,7 +39,7 @@ section {
 }
 
 .medical_site {
-  margin: 128px 0 0 30px;
+  margin: 64px 0 0 40px;
   height: 100%;
   float: right;
   .profile {
@@ -185,9 +185,10 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     .box {
+      min-width: 220px;
       position: relative;
       flex: 0 0 33.3333%;
-      padding: 0 0 36px 0;
+      padding: 0;
       &.adress {
         font-size: 18px;
       }
@@ -221,4 +222,13 @@ footer {
     font-size: 14px;
     text-align: center;
   }
+}
+
+/* Media */
+@media (max-width: 767px) {
+
+  .doctor_site {
+    max-height: 60px;
+  }
+
 }
