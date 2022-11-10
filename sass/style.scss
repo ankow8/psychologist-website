@@ -176,7 +176,7 @@ nav {
 /* Info */
 
 .info {
-  max-height: 600px;
+  //max-height: 600px;
   min-width: 300px;
   color: $text-light;
   background: $color-first;
@@ -233,11 +233,22 @@ footer {
   }
 
   .medical_site {
-    display: none;
+    //display: none;
+    padding-top: 78px;
   }
 
-  .phone_symbol, .phone_number {
+  .phone_number_nav svg, .phone_number_nav p {
     //display: none;
+  }
+
+  nav ul li {
+    margin-right: 12px;
+  }
+
+  .info .container .row {
+    display: flex;
+    flex-direction: column;
+    //align-content: center;
   }
 
 }
