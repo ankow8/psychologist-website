@@ -40,7 +40,6 @@ section {
 
 .medical_site_1 {
   margin: 64px 0 0 40px;
-  padding-top: 78px;
   height: 100%;
   float: right;
   .profile {
@@ -243,6 +242,10 @@ footer {
 
   .medical_site_2 {
     display: contents;
+  }
+
+  .activity .o_mnie {
+    margin-bottom: 100px;
   }
 
   .phone_number_nav svg, .phone_number_nav p {
