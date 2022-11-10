@@ -38,13 +38,18 @@ section {
     padding: 36px 0;
 }
 
-.medical_site {
+.medical_site_1 {
   margin: 64px 0 0 40px;
+  padding-top: 78px;
   height: 100%;
   float: right;
   .profile {
     border: 0;
   }
+}
+
+.medical_site_2 {
+  display: none;
 }
 
 .chapter {
@@ -232,13 +237,16 @@ footer {
     display: none;
   }
 
-  .medical_site {
-    //display: none;
-    padding-top: 78px;
+  .medical_site_1 {
+    display: none;
+  }
+
+  .medical_site_2 {
+    display: contents;
   }
 
   .phone_number_nav svg, .phone_number_nav p {
-    //display: none;
+    display: none;
   }
 
   nav ul li {
